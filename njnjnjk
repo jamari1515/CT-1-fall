@@ -1,0 +1,16 @@
+public class TestBankAccount {
+    public static void main(String[] args) {
+        CheckingAccount checkingAccount = new CheckingAccount();
+
+        checkingAccount.setFirstName("John");
+        checkingAccount.setLastName("Doe");
+        checkingAccount.setAccountID(123456);
+        checkingAccount.setInterestRate(1.5);
+
+        checkingAccount.deposit(500.0);
+        checkingAccount.processWithdrawal(200.0); // Successful withdrawal
+        checkingAccount.processWithdrawal(350.0); // Overdraft withdrawal
+
+        checkingAccount.displayAccount();
+    }
+}
